@@ -15,9 +15,8 @@ st.write(
         margin-right: auto; /* Center iframe horizontally */
        
     }
-     #GithubIcon {
+   .custom-iframe .button-icon a[href*="github.com"] {
         display: none; /* Hide the GitHub icon */
-        visibility: hidden;
     }
     
     </style>
