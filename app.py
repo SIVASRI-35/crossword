@@ -2,25 +2,21 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
+#import streamlit.components.v1 as components
 
-# Define CSS to hide GitHub icon and prevent wrapping of the iframe content
-css_code = """
-<style>
-#GithubIcon { 
-    visibility: hidden;
-}
-iframe {
-    white-space: nowrap;
-}
-</style>
+# Define the HTML and JavaScript code
+html_code = """
+<!-- Include the CryptoJS library for hashing the user id before sending it to the PuzzleMe server. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<!-- Include the javascript library for embedding this puzzle. -->
+<script id="pm-script" src="https://amuselabs.com/pmm/js/puzzleme-embed.js"></script>
+<!-- Specify the Amuse Labs server name from where the puzzles will be served -->
+<script>
+PM_Config.PM_BasePath = "https://amuselabs.com/pmm/";
+</script>
+<!-- Specifies the puzzle to be embedded on the page. If you want to render multiple games on your page then you can copy paste it multiple times. -->
+<div class="pm-embed-div" data-id="109e269b" data-set="38549d5e35e37b3e5de58138b84c6564ac41d6e667cc86e5733632cc3c3197f8" data-puzzleType="crossword" data-height="700px"></div>
 """
 
-# Define the iframe code with increased height
-iframe_code = """
-<iframe height="5000px" width="500%" allow="web-share; fullscreen" style="border:none; width: 100% !important; position: static;display: block !important; margin: 0 !important;" src="https://amuselabs.com/pmm/crossword?id=109e269b&set=38549d5e35e37b3e5de58138b84c6564ac41d6e667cc86e5733632cc3c3197f8&embed=1" aria-label="Puzzle Me Game"></iframe>
-"""
-
-# Combine CSS and iframe code and display using components.html()
-components.html(css_code + iframe_code)
-
-
+# Render the HTML and JavaScript code using components.html()
+components.html(html_code)
