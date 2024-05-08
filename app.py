@@ -15,7 +15,7 @@ st.write(
         margin-right: auto; /* Center iframe horizontally */
        
     }
-    .custom-iframe #GithubIcon {
+     #GithubIcon {
         display: none; /* Hide the GitHub icon */
         visibility: hidden;
     }
