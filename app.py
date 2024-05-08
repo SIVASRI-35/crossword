@@ -17,6 +17,7 @@ st.write(
     }
     .custom-iframe #GithubIcon {
         display: none; /* Hide the GitHub icon */
+        visibility: hidden;
     }
     
     </style>
