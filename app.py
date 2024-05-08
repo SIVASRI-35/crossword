@@ -2,16 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-'''
-# Hide GitHub icon CSS
-hide_github_icon = """
-<style>
-#GithubIcon { 
-    visibility: hidden;
-}
-</style>
-"""
-'''
+
 
 
 # Define CSS to hide GitHub icon and maximize iframe height
